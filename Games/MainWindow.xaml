@@ -1,0 +1,80 @@
+﻿<Window x:Class="Games.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Games"
+        mc:Ignorable="d"
+        Title="Игры" Height="300" Width="200" Icon="images/all.jpg">
+    
+    <Window.Background>
+        <ImageBrush ImageSource="images\all.jpg" />
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.ColumnSpan="3" Content="GAMES" HorizontalContentAlignment="Center" FontSize="40" Foreground="GreenYellow" FontStyle="Oblique" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth = "5" 
+                          BlurRadius = "5" 
+                          Direction = "315" 
+                          Opacity = "1 " 
+                          Color = "Black" />
+            </Label.Effect>
+        </Label>
+
+        <Button x:Name="Button2048" Margin="5" Grid.Row="1" Grid.Column="1" Content="2048" FontSize="30" FontStyle="Italic" FontWeight="Bold" Foreground="AliceBlue" Click="Button2048_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="images\2048_1.jpg"/>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth = "5" 
+                          BlurRadius = "5" 
+                          Direction = "315" 
+                          Opacity = "1 " 
+                          Color = "Black" />
+            </Button.Effect>
+        </Button>
+
+
+        <Button x:Name="ButtonSnake"
+            Margin="5" Grid.Row="2" Grid.Column="1" Content="SNAKE" FontSize="28" FontStyle="Italic" FontWeight="Bold" Foreground="Black" Click="ButtonSnake_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="images\snake.jpg"/>
+            </Button.Background>
+            
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth = "5" 
+                          BlurRadius = "5" 
+                          Direction = "315" 
+                          Opacity = "1 " 
+                          Color = "Black" />
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="ButtonTetris"
+            Margin="5" Grid.Row="3" Grid.Column="1" Content="TETRIS" FontSize="28" FontStyle="Italic" FontWeight="Bold" Foreground="Black" Click="ButtonTetris_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="D:\progect visual studio\C#\WPF\Games\Games\images\tetris.jpg"/>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth = "5"
+                          BlurRadius = "5" 
+                          Opacity = "1 "
+                          Color = "Black"/>
+            </Button.Effect>
+        </Button>
+
+    </Grid>
+</Window>
